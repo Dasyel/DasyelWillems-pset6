@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Movies</string>
+
+    <string name="button_login">Login</string>
+    <string name="button_logout">Logout</string>
+    <string name="button_suggest">Suggest</string>
+    <string name="button_friends">Friends</string>
+    <string name="button_create_account">Create Account</string>
+    <string name="button_add_to_list">Add to watchlist</string>
+
+    <string name="hint_email">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_drawer_add_list">New list name</string>
+    <string name="hint_search">Search</string>
+    <string name="hint_friend_name">Name</string>
+    <string name="hint_friend_email">Email Address</string>
+
+    <string name="auth_failed">Something went wrong, please try again later!</string>
+    <string name="error_empty_list_name">List name cannot be empty!</string>
+    <string name="error_no_results">No results were found</string>
+    <string name="error_no_such_friend">This user does not exist</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="heading_add_to_list">Add to List</string>
+</resources>
