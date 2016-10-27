@@ -40,6 +40,11 @@ import java.util.ArrayList;
 
 import static com.dasyel.dasyelwillems_pset6.models.Contract.*;
 
+/**
+ * The Main Activity is the startup activity which loads all fragments
+ * This activity has a side drawer which is available from everywhere in the app except on the
+ * login page.
+ */
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener, MovieListRequester {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -70,12 +75,14 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         fragmentManager = getSupportFragmentManager();
         spManager = SpManager.getInstance(this);
 
+        // Check whether the user is authenticated
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 user = firebaseAuth.getCurrentUser();
                 if (user == null) {
+                    // If the user is not logged in, send to the login activity
                     Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
@@ -94,7 +101,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         getSupportActionBar().setHomeButtonEnabled(true);
 
         setupDrawer();
-
     }
 
     @Override
